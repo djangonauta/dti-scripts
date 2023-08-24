@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "dti-scripts"
+version = "0.1.0"
+description = "Scripts utilitários"
+authors = ["Igor Carvalho <igor.carvalho@ifpa.edu.br>"]
+readme = "README.md"
+packages = [{include = "dti_scripts"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fabric = "^3.2.1"
+termcolor = "^2.3.0"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.2"
+bpython = "^0.24"
+flake8 = "^6.1.0"
+isort = "^5.12.0"
+
+[tool.poetry.scripts]
+reiniciar-apache-mobile2 = 'dti_scripts.servidores:reiniciar_apache_mobile2'
+reiniciar-polare-treinamento = 'dti_scripts.servidores:reiniciar_polare_treinamento'
+reiniciar-polare-producao = 'dti_scripts.servidores:reiniciar_polare_producao'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
