@@ -7,18 +7,18 @@ readme = "README.md"
 packages = [{include = "dti_scripts"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
-fabric = "^3.2.1"
-termcolor = "^2.3.0"
+python = "^3.12"
+fabric = "*"
+termcolor = "*"
 
 [tool.poetry.group.dev]
 optional = true
 
 [tool.poetry.group.dev.dependencies]
-autopep8 = "^2.0.2"
-bpython = "^0.24"
-flake8 = "^6.1.0"
-isort = "^5.12.0"
+autopep8 = "*"
+bpython = "*"
+flake8 = "*"
+isort = "*"
 
 [tool.poetry.scripts]
 reiniciar-apache-mobile2 = 'dti_scripts.servidores:reiniciar_apache_mobile2'
